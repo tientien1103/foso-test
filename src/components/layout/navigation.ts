@@ -1,6 +1,14 @@
 export const NAVIGATION = [
-    { href: "#", label: "Về chúng tôi", hasSubMenu: false },
-    { href: "#", label: "Giải pháp", hasSubMenu: true },      
-    { href: "#", label: "Tài nguyên", hasSubMenu: true },
+    { href: "#", label: "Về Chúng tôi", hasSubMenu: false },
+    { href: "#", label: "Giải pháp", hasSubMenu: true, subMenu: [
+        { href: "#", label: "Giải pháp ERP" },
+        { href: "#", label: "Giải pháp CRM" },
+        { href: "#", label: "Giải pháp Thương mại điện tử" },
+      ], },      
+    { href: "#", label: "Tài nguyên", hasSubMenu: true, subMenu: [
+        { href: "#", label: "Blog" },
+        { href: "#", label: "Case Studies" },
+        { href: "#", label: "Whitepapers" },
+      ], },
     { href: "#", label: "Liên hệ", hasSubMenu: false }, 
 ]
