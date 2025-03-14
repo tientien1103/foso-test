@@ -2,42 +2,15 @@ import { CategoryList } from "@/const/DummyData";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import TableOfContents from "./TableOfContent";
 
 function Sidebar() {
   return (
-    <div className="w-[366px] space-y-8">
-      <h4 className="font-extrabold text-2xl text-[#050505]">Tìm kiếm</h4>
-
-      <div className="relative mt-6">
-        <input
-          type="text"
-          placeholder="Tìm kiếm bài viết"
-          className="w-full rounded-[12px] bg-white py-6 pl-6 focus:outline-none shadow-[0px 12px 24px -4px rgba(145, 158, 171, 0.16)]"
-        />
-        <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#15AA7A] p-3 rounded-[12px] cursor-pointer">
-          <Image
-            src="/images/ic-search.png"
-            width={24}
-            height={24}
-            alt="Search"
-          />
-        </button>
-      </div>
+    <div className="w-[492px] space-y-6">
+      <TableOfContents />
 
       <div>
-        <h4 className="font-extrabold text-2xl text-[#050505]">Danh Mục</h4>
-        <ul className="space-y-2 mt-6">
-          {CategoryList.map((item) => (
-            <li key={item.name} className="flex justify-between">
-              <Link href="#">
-                <span className="text-[#33404A] text-lg">{item.name}</span>
-              </Link>
-              <span className="text-[#667F93] text-lg">{item.count}</span>
-            </li>
-          ))}
-        </ul>
-
-        <div className="mt-8 relative">
+        <div className="relative">
           <Image
             src="/images/box-2.png"
             width={366}
@@ -50,7 +23,7 @@ function Sidebar() {
             width={366}
             height={575}
             alt="experience"
-            className="object-cover absolute top-1/2 right-0 transform -translate-y-1/2"
+            className="object-cover absolute top-1/2 left-0 transform -translate-y-1/2"
           />
         </div>
 

@@ -5,8 +5,8 @@ export const NAVIGATION = [
         { href: "#", label: "Giải pháp CRM" },
         { href: "#", label: "Giải pháp Thương mại điện tử" },
       ], },      
-    { href: "#", label: "Tài nguyên", hasSubMenu: true, subMenu: [
-        { href: "#", label: "Blog" },
+    { href: "/resoures", label: "Tài nguyên", hasSubMenu: true, subMenu: [
+        { href: "/resoures/blog", label: "Blog" },
         { href: "#", label: "Case Studies" },
         { href: "#", label: "Whitepapers" },
       ], },

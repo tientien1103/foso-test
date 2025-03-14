@@ -1,7 +1,17 @@
 import Image from "next/image";
 import React from "react";
+import Breadcrumb from "../common/Breadcrumb";
 
-function Banner() {
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface BreadcrumbProps {
+  items: BreadcrumbItem[];
+}
+
+function Banner({ items }: BreadcrumbProps) {
   return (
     <section className="pt-[187.41px]">
       <div className="container mx-auto max-w-[1920px] relative">
@@ -34,12 +44,9 @@ function Banner() {
           className="absolute right-0 translate-y-[2550px]"
         />
         <div className="relative flex flex-col items-center">
-          <p className="font-normal text-[#414244] text-[14px] leading-[150%] pb-16">
-            Trang chủ &gt; Tài nguyên &gt;{" "}
-            <span className="font-bold"> Blog</span>
-          </p>
+          <Breadcrumb items={items} />
 
-          <p className="text-[64px] leading-[100px] text-[#050505] text-center font-normal z-10 tracking-[0%]">
+          <p className="text-[64px] leading-[100px] text-[#050505] text-center font-normal z-10 tracking-[0%] mt-[64px]">
             Blog{" "}
             <span className="bg-gradient-to-r from-[#53B086] to-[#53B086]/[0.99] bg-clip-text text-transparent font-extrabold">
               FOSO

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
+import ProgressBar from "@/components/layout/ProgressBar";
 
 const ralewaySans = Raleway({
   subsets: ["latin"],
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ralewaySans.className} antialiased`}>
+        <ProgressBar />
         <Header />
         {children}
       </body>

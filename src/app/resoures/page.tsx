@@ -1,9 +1,13 @@
+"use client";
 import Banner from "@/components/home/Banner";
 import BlogSection from "@/components/home/BlogSection";
 import Sidebar from "@/components/home/Sidebar";
 
-export default function Home() {
-  const breadcrumb = [{ label: "Trang chủ" }];
+export default function ResouresPage() {
+  const breadcrumb = [
+    { label: "Trang chủ", href: "/" },
+    { label: "Tài nguyên" },
+  ];
   return (
     <main className="w-full min-h-screen bg-[#f2f4f5] overflow-hidden">
       <Banner items={breadcrumb} />
