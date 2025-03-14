@@ -66,7 +66,7 @@ function Header() {
                       {item.label}
                     </span>
                     {pathname.startsWith(item.href) && (
-                      <div className="size-[6px] bg-[#1AD598] rounded-full translate-x-7" />
+                      <div className="size-[6px] bg-[#1AD598] rounded-full translate-x-9" />
                     )}
                   </div>
                   {item.hasSubMenu && (

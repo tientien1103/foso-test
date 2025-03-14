@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface PaginationProps {
@@ -50,10 +50,10 @@ const Pagination: FC<PaginationProps> = ({
       </button>
       <div>
         {pages.map((page, idx) => (
-          <>
+          <React.Fragment key={`page-${idx}`}>
             <button
-              key={idx}
-              onClick={() => onPageChange(Number(page))}
+              onClick={() => typeof page === "number" && onPageChange(page)}
+              disabled={page === "..."}
               className={`rounded-[8px] size-10 cursor-pointer ${
                 currentPage === page
                   ? "bg-[#d1f7ea] text-black font-semibold"
@@ -62,12 +62,7 @@ const Pagination: FC<PaginationProps> = ({
             >
               {page}
             </button>
-            {idx == 2 && (
-              <span key={idx} className="px-2 text-[#809FB8]">
-                ...
-              </span>
-            )}
-          </>
+          </React.Fragment>
         ))}
       </div>
 

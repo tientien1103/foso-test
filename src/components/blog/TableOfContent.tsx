@@ -66,7 +66,11 @@ export default function TableOfContents() {
     setActiveId(id);
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      const yOffset = -120; // Giả sử header cao 80px, bạn chỉnh con số này theo header của bạn
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
@@ -108,7 +112,7 @@ export default function TableOfContents() {
                     <li key={child.id}>
                       <button
                         onClick={() => handleClick(child.id)}
-                        className={`text-sm text-left w-full ${
+                        className={`text-sm text-left w-full cursor-pointer ${
                           activeId === child.id
                             ? "text-[#15AA7A] font-bold"
                             : "text-[#33404A] hover:text-[#15AA7A] hover:font-bold"

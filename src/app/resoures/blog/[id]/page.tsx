@@ -26,7 +26,7 @@ function DetailPage() {
           </h3>
           <ul className="grid grid-cols-1 sm:grid-cols-3 gap-8 space-y-12">
             {BlogList.slice(0, 3).map((item, index) => (
-              <BlogCard item={item} index={index} />
+              <BlogCard key={item.id || index} item={item} index={index} />
             ))}
           </ul>
         </div>
