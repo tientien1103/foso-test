@@ -25,9 +25,9 @@ function BlogSection({ currentItems }: any) {
             width={472.093}
             height={399.399}
             alt="Community"
-            className="object-cover absolute top-1/2 right-10 transform -translate-y-1/2"
+            className="object-cover absolute top-1/2 right-10 transform -translate-y-[47%]"
           />
-          <div className="absolute left-[59px] top-1/3 space-y-6">
+          <div className="absolute left-[59px] top-[15%] space-y-6">
             <p className="text-white text-4xl font-bold leading-snug">
               Gia nhập cộng đồng <br /> FMRP – Kết nối, chia <br /> sẻ, cùng
               phát triển!

@@ -13,7 +13,10 @@ export interface BlogItem {
 
 function BlogCard({ item }: { item: BlogItem }) {
   return (
-    <li key={`blog - ${item.id}`} className="h-[693px]">
+    <li
+      key={`blog - ${item.id}`}
+      className="h-[693px]  group transition-all duration-300 ease-in-out hover:-translate-y-2"
+    >
       <Link href={`/resoures/blog/1`}>
         <Image
           src={item.image}
