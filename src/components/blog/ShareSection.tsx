@@ -5,7 +5,7 @@ const SocialList = ["ic-zalo", "ic-fb", "ic-x", "ic-linked", "ic-reddis"];
 
 function ShareSection() {
   return (
-    <div className="absolute -left-36 top-52">
+    <div className="fixed left-[90px] top-80">
       <h3 className="text-[#33404A] font-extrabold text-base mb-2">Chia sẻ</h3>
       <div className="flex flex-col gap-2">
         {SocialList.map((icon) => (
