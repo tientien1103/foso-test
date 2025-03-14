@@ -4,6 +4,7 @@ import Breadcrumb from "@/components/common/Breadcrumb";
 import BlogCard from "@/components/blog/BlogCard";
 import { BlogList } from "@/const/DummyData";
 import React from "react";
+import ShareSection from "@/components/blog/ShareSection";
 
 function DetailPage() {
   const breadcrumb = [
@@ -14,7 +15,8 @@ function DetailPage() {
   ];
   return (
     <section className="py-[135px] bg-[#f2f4f5]">
-      <div className="container mx-auto max-w-[1440px]">
+      <div className="container mx-auto max-w-[1440px] relative">
+        <ShareSection />
         <Breadcrumb items={breadcrumb} />
         <div className="flex gap-8">
           <BlogContent />
