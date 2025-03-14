@@ -50,7 +50,11 @@ function Header() {
               <li key={index} className="relative group">
                 <Link
                   href={item.href}
-                  className="flex items-center gap-2 px-2 group"
+                  className={`flex gap-2 px-2 group ${
+                    pathname.startsWith(item.href)
+                      ? "items-start"
+                      : "items-center"
+                  }`}
                 >
                   <div className="relative inline-block">
                     <span
@@ -66,7 +70,7 @@ function Header() {
                       {item.label}
                     </span>
                     {pathname.startsWith(item.href) && (
-                      <div className="size-[6px] bg-[#1AD598] rounded-full translate-x-9" />
+                      <div className="size-[6px] bg-[#1AD598] rounded-full absolute -bottom-2 left-1/2" />
                     )}
                   </div>
                   {item.hasSubMenu && (
@@ -75,7 +79,9 @@ function Header() {
                       width={16}
                       height={16}
                       alt="arrow-down"
-                      className="object-contain"
+                      className={`object-contain ${
+                        pathname.startsWith(item.href) && "translate-y-0.5"
+                      }`}
                     />
                   )}
                 </Link>

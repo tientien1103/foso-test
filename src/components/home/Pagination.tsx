@@ -62,6 +62,7 @@ const Pagination: FC<PaginationProps> = ({
             >
               {page}
             </button>
+            {idx === 2 && <span className="mx-2">...</span>}
           </React.Fragment>
         ))}
       </div>
